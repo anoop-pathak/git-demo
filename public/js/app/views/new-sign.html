@@ -1,0 +1,111 @@
+<div 
+	class="popup-container cust-sign-one">
+	<div class="content-header">
+		<h3 class="cust-sign-heading">Signature</h3>
+	</div>
+	<div class="content-part signature-modal-container">
+		<div class="row">
+			<div class="action-option">
+				<div class="options-wrap">
+					<div class="check-option">
+						<label>
+							<input
+								type="checkbox"
+								id="text"
+								ng-model="Sign.signType.text"
+								ng-change="Sign.selectType('text')">Use Keyboard</label>
+					</div>
+					<div class="check-option">
+						<label>
+							<input
+								type="checkbox"
+								id="mouse"
+								ng-model="Sign.signType.mouse"
+								ng-change="Sign.selectType('mouse')">Use Mouse</label>
+					</div>
+					<div class="clearfix"></div>
+
+					<div 
+						class="check-option pull-right right-font-sec signature-text-settings"
+						ng-show="Sign.signType.text">
+						<div class="style-options-comp">
+							<label>Font family </label>
+							<select
+								ng-model="Sign.fields.family"
+								name="familyList" 
+								ng-change="Sign.updateImage('font-family', Sign.fields.family)" 
+								id="familyList"
+								class="form-control">
+								<option ng-repeat="family in Sign.familyList"><% family %></option>
+							</select>
+						</div>
+						<div class="style-options-comp">
+							<label>Font Style</label>
+							<select
+								ng-model="Sign.fields.style"
+								name="styleList" 
+								ng-change="Sign.updateImage('style', Sign.fields.style)" 
+								id="styleList"
+								class="form-control">
+								<option ng-repeat="style in Sign.styleList"><% style %></option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="col-md-4 inner-wrap canvas-sign-sec">
+
+				<div>
+					<div class="custom-col" ng-show="Sign.signType.mouse">
+						<a class="clear-link" ng-click="Sign.sign.clear()" ng-href="">
+							<span class="clear-icon"></span>
+						</a>
+						<signature-pad 
+							accept="Sign.sign.accept" 
+							clear="Sign.sign.clear"
+							width="340" 
+							height="220"></signature-pad>
+
+					</div>
+					<div 
+						class="custom-col" 
+						ng-show="Sign.signType.text">
+						<text:signature
+							options="Sign.signOpt"></text:signature>
+					</div>
+
+					<div 
+						class="alert alert-danger" 
+						ng-show="Sign.signType.mouse && Sign.signError">
+				  		Please Sign First.
+					</div>
+					<div 
+						class="alert alert-danger" 
+						ng-show="Sign.signType.text && Sign.signError">
+				  		Please create a sign first.
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div style=""  class="sign-container">
+			<textarea 
+				placeholder="Enter Your Comment" 
+				ng-model="Sign.comment" 
+				class="acpt-proposal-comment"></textarea>
+		</div>
+	</div>
+	<div class="content-footer">
+		<div class="text-right">
+			<button 
+				ng-disabled="Sign.fields.font < 40"
+				ng-click="Sign.signed()" 
+				type="button" 
+				class="btn btn-sm btn-primary custom-btn">Done</button>
+			<button ng-click="Sign.close()" 
+				type="button" 
+				class="btn btn-sm custom-btn">Cancel</button>
+		</div>
+	</div>
+</div>

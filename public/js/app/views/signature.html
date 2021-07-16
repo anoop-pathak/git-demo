@@ -1,0 +1,174 @@
+<!-- select signatures to do -->
+<!-- <div 
+	class="popup-container cust-sign-one" 
+	ng-if="Sign.signatures.length > 1 && !Sign.showSign">
+	<div class="content-header">
+		<h3 class="cust-sign-heading">Accept Proposal</h3>
+	</div>
+	<div class="content-part signature-modal-container">
+		<div class="row">
+			<div class="action-option">
+				<div class="options-wrap">
+					<div class="check-option" ng-repeat="val in Sign.signatures">
+						<label>
+							<input
+								type="checkbox"
+								id="sign-<%$index%>"
+								ng-model="val.selected"
+								ng-change="Sign.selectSign(val.name)"><span ng-bind="val.name"></span></label>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="content-footer">
+		<div class="text-right">
+			<button 
+				ng-disabled="!Sign.selectedSigns.length"
+				ng-click="Sign.showSigns()" 
+				type="button" 
+				class="btn btn-sm btn-primary custom-btn">Sign</button>
+			<button ng-click="Sign.close()" 
+				type="button" 
+				class="btn btn-sm custom-btn">Cancel</button>
+		</div>
+	</div>
+</div>
+ -->
+<!-- signature -->
+<div 
+	class="popup-container"
+	ng-class="{
+		'cust-sign-one': (Sign.signatures.length == 1),
+		'cust-sign-two': (Sign.signatures.length == 2),
+		'cust-sign-three': (Sign.signatures.length == 3)
+	}">
+	<div class="content-header">
+		<h3 class="cust-sign-heading">Accept Proposal</h3>
+	</div>
+	<div class="content-part signature-modal-container">
+		<div class="row">
+			<div class="action-option">
+				<div class="options-wrap">
+					<div class="check-option">
+						<label>
+							<input
+								type="checkbox"
+								id="text"
+								ng-model="Sign.signType.text"
+								ng-change="Sign.selectType('text')">Use Keyboard</label>
+					</div>
+					<div class="check-option">
+						<label>
+							<input
+								type="checkbox"
+								id="mouse"
+								ng-model="Sign.signType.mouse"
+								ng-change="Sign.selectType('mouse')">Use Mouse</label>
+					</div>
+					<div class="clearfix"></div>
+					
+					<div 
+						class="check-option pull-right right-font-sec signature-text-settings" 
+						ng-show="Sign.signType.text">
+						
+						<!-- <div class="style-options-comp"> 
+							<label>Font Size</label>
+							<input 
+								type="text" 
+								ng-model="Sign.fields.font" 
+								class="input form-control" 
+								ng-change="Sign.updateImage('size', Sign.fields.font)"  
+								class="font-size">
+						</div> -->
+						<div class="style-options-comp">
+							<label>Font family </label>
+							<select
+								ng-model="Sign.fields.family"
+								name="familyList" 
+								ng-change="Sign.updateImage('font-family', Sign.fields.family)" 
+								id="familyList"
+								class="form-control">
+								<option ng-repeat="family in Sign.familyList"><% family %></option>
+							</select>
+						</div>
+						<div class="style-options-comp">
+							<label>Font Style</label>
+							<select
+								ng-model="Sign.fields.style"
+								name="styleList" 
+								ng-change="Sign.updateImage('style', Sign.fields.style)" 
+								id="styleList"
+								class="form-control">
+								<option ng-repeat="style in Sign.styleList"><% style %></option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div ng-repeat="sig in Sign.signatures track by $index" 
+				class="col-md-4 inner-wrap canvas-sign-sec">
+				
+				<div>
+					<div class="custom-col" ng-show="Sign.signType.mouse">
+						<a class="clear-link" ng-click="sig.customer.clear()" ng-href="">
+							<span class="clear-icon"></span>
+						</a>
+						<signature-pad 
+							accept="sig.customer.accept" 
+							clear="sig.customer.clear"
+							width="340" 
+							height="220"></signature-pad>
+				
+					</div>
+					<div 
+						class="custom-col" 
+						ng-show="Sign.signType.text">
+						<text:signature
+							options="sig.customer.typeOpt"></text:signature>
+					</div>
+				
+					<div 
+						class="alert alert-danger" 
+						ng-show="Sign.signType.mouse && sig.sign.isEmpty && !Sign.showSignError && !Sign.saving" >
+				  		Please Sign First.
+					</div>
+					<div 
+						class="alert alert-danger" 
+						ng-show="Sign.signType.text && sig.sign.isEmpty && !Sign.showSignError && !Sign.saving" >
+				  		Please create a sign first.
+					</div>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+			<div class="clearfix"></div>
+			<div 
+				style="margin-left: 10px; margin-right: 10px;" 
+				class="alert alert-danger" 
+				ng-show="Sign.showSignError" >
+		  		Please create a sign first.
+			</div>
+		</div>
+		<div style=""  class="sign-container">
+			<textarea 
+				placeholder="Enter Your Comment" 
+				ng-model="Sign.comment" 
+				class="acpt-proposal-comment"></textarea>
+		</div>
+	</div>
+	<div class="content-footer">
+		<div class="text-right">
+			<button 
+				ng-disabled="Sign.fields.font < 40"
+				ng-click="Sign.accpetProposal()" 
+				type="button" 
+				class="btn btn-sm btn-primary custom-btn"><%Sign.getBtnText()%></button>
+			<button ng-click="Sign.close()" 
+				type="button" 
+				class="btn btn-sm custom-btn">Cancel</button>
+		</div>
+	</div>
+</div>

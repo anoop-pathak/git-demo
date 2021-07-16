@@ -1,0 +1,192 @@
+<div class="page-container-proposal"  >
+    <div ng-if= "Dir.proposal.is_file == '1'" >
+        <div class="row button-wrap">
+            <div class="col-md-12 col-xs-12 right-side-buttons col-sm-12 top-fix-btn-header">
+                <a
+                    ng-href=""
+                    ng-if="!Dir.isAccepetedOrRejected() && !Dir.$parent.isOldProposal"
+                    class="btn btn-primary"
+                    ng-disabled="Dir.$parent.disabed"
+                    ng-style="Dir.$parent.initialBtn"
+                    ng-click="Dir.$parent.doInitialSignature()">
+                    Initial
+                </a>
+                <a
+                    ng-if="!Dir.isAccepetedOrRejected()"
+                    ng-href=""
+                    ng-disabled="Dir.$parent.disabed || Dir.$parent.requiredCustomerInitial"
+                    class="btn btn-success"
+                    ng-click="Dir.$parent.accept()">
+                        Accept
+                </a>
+                <a
+                    ng-if="!Dir.isAccepetedOrRejected()"
+                    ng-href=""
+                    ng-disabled="Dir.$parent.disabed"
+                    class="btn btn-danger"
+                    ng-click="Dir.$parent.reject()">
+                    Reject
+                </a>
+                <a ng-href="{{Dir.downloadFile}}" target="_blank" class="btn btn-inverse">
+                    Print
+                </a>
+                <a ng-href="{{Dir.downloadFile}}?download=1" target="_blank" class="btn btn-inverse">
+                    Download
+                </a>
+            </div>
+        </div>
+        <div class="pdf-wrap" >
+            <pdf:viewer page-type="<%Dir.proposal.page_type%>"></pdf:viewer>
+        </div>
+    </div>
+    <div  ng-if= "Dir.proposal.is_file == '0'">
+        <div class="aside-close-btn text-right" style="display: none;"  >
+            <a
+                ng-if="!Dir.isAccepetedOrRejected() && !Dir.$parent.isOldProposal"
+                ng-href=""
+                class="btn btn-primary"
+                ng-disabled="Dir.$parent.disabed"
+                ng-style="Dir.$parent.initialBtn"
+                ng-click="Dir.$parent.doInitialSignature()">
+                Initial
+            </a>
+            <a
+                ng-if="!Dir.isAccepetedOrRejected()"
+                ng-href=""
+                ng-disabled="Dir.$parent.disabed || Dir.$parent.requiredCustomerInitial"
+                class="btn btn-success"
+                ng-click="Dir.$parent.accept()">
+                    Accept
+            </a>
+            <a
+                ng-if="!Dir.isAccepetedOrRejected()"
+                ng-href=""
+                ng-disabled="Dir.$parent.disabed"
+                class="btn btn-danger"
+                ng-click="Dir.$parent.reject()">
+                Reject
+            </a>
+            <a ng-href="{{Dir.downloadFile}}" target="_blank" class="btn btn-inverse">
+                Print
+            </a>
+            <a ng-href="{{Dir.downloadFile}}?download=1" target="_blank" class="btn btn-inverse">
+                Download
+            </a>
+           <!--  <a ng-href=""   ng-click="Dir.checkedData()" title="Back" class="btn btn-inverse pull-left">
+                &laquo; Data
+            </a> -->
+        </div>
+        <div
+             class="modal-body fix-width-container"
+             style="padding: 0;"
+             scroll-proposal-btn>
+            <div class="snackbar-container" snackbar></div>
+            <div class="loader" style="text-align: center;padding: 200px 0 0 0;">
+                <div class="lds-dual-ring"></div>
+                <br>Loading...
+            </div>
+            <div
+                class="wrpr-html proposal-viewer-public proposal-page-scroll <%Dir.proposal.page_type%>"
+                style="display: none;"
+                page-type="<%Dir.proposal.page_type%>"
+                disabled-all-input
+                topside
+                blair
+                quinn
+                achten
+                doubled-contractors
+                nanfito-roofing
+                ab-edwards
+                solar-me
+                daniel-hood-roofing
+                first-class-roofing
+                jmac
+                wyoming-roofing
+                linkville-roofing
+                pinnacle-remodelling
+                american-roofing
+                claims-pro-restoration
+                claims-pro-best-one
+                affordable-roofing
+                great-roofing
+                burell-built
+                flores-and-cooney
+                midsouth-construction
+                allied-construction
+                john-henderson-construction
+                thoroughbred-roofing
+                heartland-best2
+                heartland-best1
+                george-keller
+                north-wood-roofing
+                keith-gauvin-roofing
+                sparrow-exteriors
+                versatile-roofing
+                five-boro-remodeling
+                dior-construction
+                gb-home-improvements
+                dynamic-home-exteriors
+                commonwealth-roofing
+                roofing-right
+                residential-roofing-llc
+                ah-exteriors
+                stone-heating-inc
+                pressure-point-roofing-inc
+                pressure-point-roofing-llc
+                envision-roofing-llc
+                am-roofing
+                pro-built-homes
+                best-power-form
+                roof-tech-best1
+                roof-tech-best2
+                hudson-contracting-best1
+                id="proposal-jp-create"
+                proposal-changed-data="Dir.ref">
+                <div
+                    class="html-container" class="col-md-12"
+                    set-table-data
+                    seclection-container
+                    ng-bind-html="::Dir.getHtml(page.content)"
+                    ng-repeat="page in Dir.proposal.pages.data" >
+                </div>
+                <div ng-if="Dir.proposal.attachments.data.length > 0" >
+                    <div 
+                        class="html-container col-md-12" 
+                        ng-repeat="data in Dir.proposal.attachments.data" 
+                        ng-show="($index % Dir.proposal.attachments_per_page) == 0">
+                        <div class="dropzone-container">
+                            <div 
+                                class="page wkhtml-print attachment-container" 
+                                style="text-align:center;position:relative;margin:0.9cm;">
+                                <div style="text-align:left">
+                                    <div class="company-detail-info-print">
+                                        <label><b><%company.name%></b></label>
+                                        <label><%company.office_address%></label>
+                                        <label></label>
+                                        <label><%company.office_city%>, <%company.state.name%>, <%company.office_zip%></label>
+                                        <label><%company.office_email%></label>
+                                    </div>
+                                    <div class="customer-detail-info-print">
+                                        <label><%Dir.proposal.job.customer.full_name%>/<%Dir.proposal.job.number%></label>
+                                        <label></label>
+                                        <label></label>
+                                        <label></label>
+                                    </div>
+                                </div>
+                                <div style="clear:both"></div>
+                                <h2>Attached Images</h2>
+                                <div 
+                                    class="attach-images" 
+                                    ng-repeat="file in Dir.proposal.attachments.data" 
+                                    ng-show="($parent.$index % Dir.proposal.attachments_per_page == 0) && ($parent.$index + Dir.proposal.attachments_per_page > $index) && ($parent.$index <= $index)">
+                                    <p><%file.name%></p>
+                                    <img style="max-width: 100%; max-height: 350px;" src="<%file.url%>">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

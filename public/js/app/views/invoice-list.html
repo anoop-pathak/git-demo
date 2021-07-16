@@ -1,0 +1,66 @@
+<div class="modal-header">
+	<h4 style="padding:0; text-align: left;" class="modal-title">Invoice(s)
+		<div class="pull-right" ng-if="Modal.IsQBConnected && Modal.selectedInvoice.length > 0">
+			<button 
+				class="quickbook-payment-button btn btn-xs btn-success" 
+				ng-click="Modal.pay()">
+				<i class="fa fa-fw qb-icon-white"></i> Pay Invoice(s)
+			</button>
+		</div>
+	</h4>
+</div>
+<div class="modal-body">
+	<div class="table-responsive border0">
+	  	<table class="table table-striped border0">
+	  		<thead>
+	  			<tr>
+	  				<th width="50" ng-if="Modal.IsQBConnected">
+		        		<div class="custom-checkbox">
+							<input 
+								type="checkbox" 
+								id="select-all"
+								class="css-checkbox invoice-checkbox" 
+								ng-model="Modal.isAllSelected" 
+								ng-disabled="Modal.paidInvoices.length == Modal.invoices.length"
+								ng-change="Modal.selectAll(Modal.isAllSelected)">
+							<label for="select-all" class="has-outer-label css-label checkbox-label radGroup1"></label>
+						</div>
+	  				</th>
+	  				<th width="150">Invoice Name</th>
+	  				<th width="130">Amount</th>
+	  				<th width="130">Amount Due</th>
+	  				<th width="80">Actions</th>
+	  			</tr>
+	  		</thead>
+	  		<tbody>
+	  			<tr ng-repeat="invo in Modal.invoices">
+	  				<td ng-if="Modal.IsQBConnected">
+		        		<div class="custom-checkbox">
+							<input 
+								type="checkbox"
+								id="select-invoice-<% $index+1 %>"
+								name="select-invoice-<% $index+1 %>" 
+								class="css-checkbox invoice-checkbox"
+								ng-model="invo.selected" 
+								ng-disabled="!invo.open"
+								ng-change="Modal.selectInvoice(invo.selected)">
+							<label for="select-invoice-<% $index+1 %>" class="has-outer-label css-label checkbox-label radGroup1"></label>
+						</div>
+	  				</td>
+	  				<td><% invo.title %></td>
+	  				<td><% invo.total_amount %></td>
+	  				<td>
+	  					<span class="label label-success" ng-if="!invo.open">PAID</span>
+	  					<span style="font-weight: normal;" ng-if="invo.open"><% invo.open_balance %></span>
+	  				</td>
+	  				<td>
+						<a ng-href="<% invo.invoice_link + '?token=' + Modal.token %>" target="_blank" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> </a>
+	  				</td>
+	  			</tr>
+	  		</tbody>
+  		</table>
+	</div>
+</div>
+<div class="modal-footer">
+	<button type="button" style="color: #fff;" class="btn btn-inverse" ng-click="Modal.close()">Close</button>
+</div> 

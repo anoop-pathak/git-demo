@@ -1,0 +1,104 @@
+body {
+    background: #fff;
+    margin: 0;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    color: #333;
+}
+.font0 {
+    font-size: 0;
+}
+.last-modified {
+    font-size: 12px;
+    color: #889;
+    text-align: right; 
+}
+.company-details .left,
+.company-details .right {
+    font-size: 15px;
+    display: inline-block;
+    width: 50%;
+    color: #333;
+    vertical-align: top;
+}
+.text-right {
+    text-align: right;
+}
+.mb5 {
+    margin-bottom: 5px;
+}
+.company-details h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: normal;
+}
+.company-details .address  {
+    /*width: 235px;*/
+}
+.company-details .right .address {
+    margin-left: auto;
+}
+.measurement-data-container {
+    padding: 15px 15px 10px;
+    border: 1px solid #eee;
+    margin-top: 15px;
+}
+.measurement-data-container h5 {
+    margin: 3px 0 8px;
+    font-size: 17px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.data-block {
+    width: 49%;
+    display: inline-block;
+    font-size: 15px;
+    padding: 5px 0;
+}
+.data-block .item-name {
+    display: inline-block;
+    width: 120px;
+}
+.data-block .unit {
+    display: inline-block;
+    vertical-align: top;
+}
+.measure-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.measure-title h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.company-logo {
+    border: 1px solid rgb(204, 204, 204);
+    text-align: center;
+    height: 130px;
+    line-height: 128px;
+    width: 128px;
+    float: left;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.company-logo img {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.address-col {
+    display: block;
+    margin-left: 140px;
+}
+.address-col h4 {
+    margin-top: 0;
+}
+.logo-hide-text {
+    margin-left: 0;
+}

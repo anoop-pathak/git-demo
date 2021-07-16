@@ -1,0 +1,179 @@
+.margin0 {
+  margin: 0 !important;
+}
+.abc-container {
+  text-align: left;
+  width: 29cm;
+  padding: 0 20px;
+  margin: auto;
+  background: #fff;
+  font-family: 'Barlow', sans-serif;
+}
+.abc-container * {
+  font-family: inherit !important;
+}
+.abc-container label {
+  font-size: 13px;
+}
+.abc-container input[type="radio"] {
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.abc-container .abc-logo img {
+  height: 100px;
+  width: auto;
+}
+.abc-container .checklist-input {
+  border: none;
+  width: 45px;
+  height: 16px;
+}
+.abc-container .text-area-abc-form {
+  overflow: hidden;
+  height: 20px;
+  width: 100%;
+  border: none;
+  padding: 0 5px;
+}
+.abc-wrap-bg {
+  background: #edf0f7;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.abc-input-group label {
+  color: #024994;
+  display: inline-block;
+  vertical-align: middle;
+}
+.abc-input-group input {
+  display: inline-block;
+  vertical-align: middle;
+}
+.abc-input-group input,
+.abc-bottom-content input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid;
+  border-color: #024994;
+}
+.abc-heading {
+  background: #024994;
+  color: #fff;
+}
+.abc-supply-color-table table {
+  border-color: #024994;
+}
+.abc-supply-color-table table th,
+.abc-supply-color-table table td {
+  padding: 5px;
+}
+.abc-bottom-content span {
+  font-weight: 100;
+  color: #024994;
+}
+.checklist-table-title {
+  background-color: #788BBC;
+  color: #fff;
+  font-size: 16px;
+}
+.checklist-table-wrap table {
+  margin-top: 20px;
+  border: 0;
+}
+.checklist-table-wrap table td,
+.checklist-table-wrap table th {
+  border-color: #788BBC;
+  border-width: 2px;
+}
+.checklist-table-wrap table td {
+  padding: 0 5px;
+  height: 25px;
+  font-size: 13px;
+}
+.radio-btn-grp {
+  display: inline-block;
+  margin-right: 5px;
+}
+.radio-btn-grp:last-child {
+  margin: 0;
+}
+.label-text {
+  float: left;
+}
+.input-wrap {
+  overflow: hidden;
+  display: block;
+  padding: 0 4px 0 10px;
+}
+.input-wrap input {
+  width: 100%;
+}
+.cash-options .form-group label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #024994;
+}
+.cash-options .form-group {
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .cash-options .form-group {
+    display: inline-block;
+  }
+  .cash-options .form-group label {
+    font-size: 15px;
+  }
+}
+.abc-bottom-content input[type="checkbox"],
+.cash-options input[type="checkbox"],
+.abc-input-group input[type="checkbox"] {
+  margin: -3px 0 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.cash-options .form-group:last-child {
+  margin-right: 0;
+}
+.abc-tag {
+  position: absolute;
+  font-size: 10px;
+  border: 1px solid #ccc;
+  display: block;
+  padding: 0px 5px;
+  line-height: 2;
+  background: #efefef;
+  right: 0;
+  bottom: 0;
+}
+.abc-product-table-wrap table td {
+  padding: 0;
+}
+.abc-product-table-wrap table td input {
+  padding: 5px;
+  border: 0;
+}
+.abc-product-table-wrap table #add-line-btn td {
+  padding: 5px;
+}
+.abc-input-group.abc-form-custom-wrap .label-text {
+  color: #555;
+  font-weight: 400;
+}
+.abc-input-group.abc-form-custom-wrap .input-wrap input {
+  color: #555;
+  font-weight: 400;
+  border-color: #555;
+}
+.abc-form-custom-wrap .input-pl-0 {
+  padding-left: 0;
+}
+.checklist-table-wrap.table-space-col {
+  margin-top: 42px;
+}
+.product-checklist-section {
+  page-break-before: always;
+}
+#supplier-product-table {
+  border-collapse: separate;
+}

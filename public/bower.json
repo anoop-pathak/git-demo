@@ -1,0 +1,18 @@
+{
+  "name": "JobProgress",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "1.5.8",
+    "signature_pad": "^1.5.3",
+    "jquery": "*",
+    "pdfjs-bower": "^1.0.233",
+    "angular-signature": "^0.1.8",
+    "angular-bootstrap": "~0.12.0",
+    "angular-loading-bar": "0.9.0",
+    "angular-validation": "^1.4.4"
+  },
+  "resolutions": {
+    "signature_pad": "^1.5.3",
+    "angular": "1.5.8"
+  }
+}

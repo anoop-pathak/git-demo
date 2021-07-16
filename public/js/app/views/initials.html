@@ -1,0 +1,50 @@
+<div class="custom-recurring-modal common-module-popup">
+	<div class="popup-title">
+		<h3 style="padding:0;" class="modal-title">Initials(<% Modal.initialsCount %>)
+			<div class="pull-right color-box-container color-box-wrap">
+				<div class="color-box-icon">
+					<span class="color" style="background: 	#D9EAD3"></span>
+					<span>Signature 1 Initials</span>
+				</div>
+				<div class="color-box-icon" ng-if="!Modal.isOld">
+					<span class="color" style="background: 	#FFF2CC"></span>
+					<span>Signature 2 Initials</span>
+				</div>
+				<div class="color-box-icon" ng-if="!Modal.isOld">
+					<span class="color" style="background: 	#CFE2F3"></span>
+					<span>Signature 3 Initials</span>
+				</div>
+			</div>
+		</h3>
+	</div>
+
+	<div class="popup-inner-detail">
+		<div class="estimate-tabs create-proposal-tabs sign-tabs" ng-if="Modal.proposal.pages.data.length > 1"> 
+			<ul style="margin-top: 10px;">
+				<li 
+					ng-class="{ 'active': Modal.currentIndex == $index }" 
+					ng-repeat="page in Modal.proposal.pages.data">
+
+					<a ng-click="Modal.selectTab($index)" ng-href="">
+						<span>Page <% $index+1 %></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="template-con estimate-tab-content temp-wrap jp-temp-wrap">
+			<div id="template" ng-bind-html="Modal.currentPage.content"></div>
+		</div>
+	</div>
+
+	<div class="popup-footer">
+		<button 
+			style="color:#fff;" 
+			class="btn btn-primary" 
+			type="button"
+			ng-click="Modal.save()">
+			Save Initials
+		</button>
+		<button style="color:#fff;" class="btn btn-inverse" type="button" ng-click="Modal.close()">Cancel</button>
+	</div>
+</div>

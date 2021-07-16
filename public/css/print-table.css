@@ -1,0 +1,138 @@
+.jp-print-table-wrap {
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+  .print-table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+  }
+  .print-table tr {
+    page-break-inside: avoid;
+  }
+  .print-table th,
+  .print-table td {
+    padding: 10px;
+  }
+  .print-table th.text-right,
+  .print-table td.text-rightd {
+    text-align: right;
+  }
+  .print-table th {
+    text-align: left;
+    font-weight: bold;
+    border-top: 2px solid #707070;
+    border-bottom: 1px solid #707070;
+    vertical-align: middle;
+  }
+  .print-table td {
+    border-bottom: 1px solid #CDCED1;
+    line-height: 1.4;
+    vertical-align: top;
+  }
+  .print-table td * {
+    font-weight: normal;
+  }
+  .print-table td p {
+    margin-top: 8px;
+    color: #3d3d3d;
+    font-size: 13px;
+  }
+  .print-table .td-col-max {
+    padding-right: 30px;
+  }
+  .print-table-footer {
+    margin-top: 15px;
+    text-align: right;
+    font-size: 14px;
+    page-break-inside: avoid;
+  }
+  .print-table-footer .footer-value {
+    margin-bottom: 10px;
+    font-weight: normal;
+  }
+  .print-table-footer .footer-value span,
+  .print-table-footer .footer-value label {
+    display: inline-block;
+    min-width: 160px;
+    font-weight: normal;
+    color: #333;
+  }
+  .print-table-footer .footer-value.total span,
+  .print-table-footer .footer-value.total label {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .amount-wrap {
+    margin-bottom: 20px;
+    text-align: right;
+  }
+  .total-amt {
+    font-size: 18px;
+    color: #418BCA;
+    text-align: right;
+  }
+  .amt-paid {
+    color: green;
+  }
+  .amt-type {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  .print-note {
+    display: block;
+    width: 100%;
+    margin: 20px 0 0;
+    page-break-inside: avoid;
+  }
+  .print-note label {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .print-note p {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: normal;
+    color: #3d3d3d;
+    white-space: pre-wrap;
+  }
+  .signbox {
+    margin-top: 15px;
+    page-break-inside: avoid;
+  }
+  .signbox label {
+    text-align: left;
+    display: block;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .sign {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin-top: 1px;
+  }
+  .sign img {
+    max-height: 75%;
+    width: auto;
+    margin-top: 1px;
+  }
+  .sign .sign-date {
+    font-size: 10px;
+    height: 30px;
+    line-height: 18px;
+    border-top: 1px solid #ccc;
+    margin-top: 3px;
+  }
+  .branch-detail {
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 12px;
+    background: #E9EBEF;
+    border-radius: 5px;
+  }

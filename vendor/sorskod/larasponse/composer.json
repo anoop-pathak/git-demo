@@ -1,0 +1,27 @@
+{
+    "name": "sorskod/larasponse",
+    "description": "",
+    "authors": [
+        {
+            "name": "Aleksandar Babic",
+            "email": "salebab@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "~5.0",
+        "illuminate/pagination": "~5.0",
+        "illuminate/http": "~5.0",
+        "league/fractal": "~0.11"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Sorskod\\Larasponse": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -1,0 +1,118 @@
+body {
+	background-color: transparent;
+}
+/*#toolbarContainer, .findbar, .secondaryToolbar {
+	background-color: transparent;	
+}*/
+#scaleSelect, 
+#sidebarToggle,
+#sidebarContainer,
+#secondaryViewBookmark,
+#viewBookmark,
+#secondaryOpenFile,
+#secondaryViewBookmark,
+#pageRotateCw,
+#pageRotateCcw,
+#toggleHandTool,
+#documentProperties,
+#scaleSelectContainer,
+#openFile,
+#print,
+#download {
+	display: none;
+}
+html[dir='ltr'] .innerCenter {
+    right: 0;
+}
+/*#viewerContainer {
+	overflow: hidden;
+}*/
+.pdfobject-container {
+    width: 100%;
+    max-width: 600px;
+    height: 760px;
+    margin: 0;
+}
+html[dir='ltr'] #outerContainer.sidebarOpen > #mainContainer {
+	float: none;
+	left: 0;
+}
+html[dir='ltr'] #toolbarViewerLeft, html[dir='rtl'] #toolbarViewerRight {
+    position: absolute;
+    top: 0;
+    left: auto; 
+    float: right;
+    right: 100px;
+}
+html[dir='ltr'] #outerContainer.sidebarMoving .outerCenter, html[dir='ltr'] #outerContainer.sidebarOpen .outerCenter {
+    float: right;
+    left: -35px;
+}
+@media (max-width: 960px) {
+	html[dir='ltr'] #outerContainer.sidebarMoving .outerCenter, html[dir='ltr'] #outerContainer.sidebarOpen .outerCenter {
+	    float: right;
+	    left: -35px;
+	}	
+}
+.pdfViewer {
+    background-color: #fff;
+}
+.pdfViewer .page .loadingIcon {
+    display: none;
+}
+.pdfViewer .page {
+    width: 100%;
+    direction: ltr; 
+    /*width: 816px;
+    height: 1056px;*/
+    margin: auto; 
+    position: relative; 
+    overflow: hidden; 
+    border: none;
+}
+.toolbarBg #toolbarContainer {
+    background-color: #7d7d7d;
+    background-image: url(images/texture.png), linear-gradient(hsla(0, 2%, 51%, 0.99), hsla(0, 2%, 52%, 0.95));
+}
+.toolbarBg .toolbarLabel {
+    color: #fff;
+}
+.toolbarBg #toolbarContainer, .findbar, .secondaryToolbar {
+    background-color: #7d7d7d;
+    border: 1px solid hsla(0, 2%, 52%, 0.95);
+    background-image: url(images/texture.png), linear-gradient(hsla(0, 2%, 51%, 0.99), hsla(0, 2%, 52%, 0.95));
+}
+.toolbarBg .doorHanger:before, .doorHangerRight:before {
+    /*border-bottom-color: none;*/
+    left: 190px;
+    border-bottom-color: hsla(0,0%,0%,.5);
+}
+.toolbarBg .doorHanger:after, .doorHangerRight:after {
+    border-bottom-color: hsla(0, 2%, 42%, 0.99);
+}
+html[dir='ltr'] {
+    overflow-x: hidden;
+}
+html[dir='ltr'] .toolbarBg .findbar {
+    left: 290px;
+}
+html[dir='ltr'] .toolbarBg .doorHanger:before, html[dir='rtl'] .doorHangerRight:before {
+    margin-left: 168px;
+    border-bottom-color: none;
+}
+html[dir='ltr'] .doorHanger:after, html[dir='rtl'] .doorHangerRight:after {
+    border-bottom-color: hsla(0, 2%, 52%, 0.95);
+    margin-left: 169px;
+}
+/*.toolbarButton::before, .secondaryToolbarButton::before {
+    position: absolute;
+    display: inline-block;
+    top: 4px;
+    left: 7px;
+}*/
+html[dir='ltr'] .toolbarBg .toolbarButton#secondaryToolbarToggle::before {
+    content: url(images/setting-icon.png);
+/*    background-image: url(images/setting-icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;*/
+}

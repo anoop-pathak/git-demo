@@ -1,0 +1,63 @@
+<div class="custom-recurring-modal common-module-popup">
+	<div class="popup-title">
+		<h3 style="padding:0;" class="modal-title">INITIAL & SIGN
+			<div class="pull-right signature-color sign-header-container" ng-if="Modal.initials.length > 1">
+				<span 
+					ng-repeat="ini in Modal.initials"
+					ng-click="Modal.selectInitial(ini)"
+					class="signature-color-icon" 
+					style="background: 	<% ini.color %>;font-size: 15px;">
+					<i 
+						class="fa fa-check" 
+						ng-show="ini.selected"></i> <% ini.name %> (<% ini.count %>) 
+					<i 
+						ng-show="ini.allDone" 
+						style="color: green" 
+						class="fa fa-check-circle"></i>
+				</span>
+			</div>
+		</h3>
+	</div>
+
+	<div class="popup-inner-detail">
+		<div 
+			class="alert alert-danger" 
+			ng-show="Modal.signError">
+	  		<% Modal.signError %>
+		</div>
+		<div class="estimate-tabs create-proposal-tabs sign-tabs" ng-if="Modal.pages.length > 1"> 
+			<ul style="margin-top: 10px;">
+				<li 
+					ng-class="{ 'active': Modal.currentIndex == $index }" 
+					ng-repeat="page in Modal.pages">
+
+					<a ng-click="Modal.selectTab($index)" ng-href="">
+						<span>Page <% $index+1 %></span>
+						<span 
+							style="background-color: <% Modal.colors[Modal.selectedIni] %>" 
+							ng-if="page.count[Modal.selectedIni] > 0" 
+							class="badge sign-badge">
+							<% page.count[Modal.selectedIni] %>
+						</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="template-con estimate-tab-content jp-temp-wrap">
+			<div id="template" ng-bind-html="Modal.currentPage.content"></div>
+		</div>
+	</div>
+
+	<div class="popup-footer">
+		<button 
+			style="color:#fff;" 
+			class="btn btn-primary" 
+			type="button" 
+			ng-disabled="!Modal.selectedIni"
+			ng-click="Modal.save()">
+			<% (Modal.currentSigns.length == 1 && Modal.currentSigns[0] == Modal.selectedIni) ? 'SAVE & ACCEPT PROPOSAL' : 'SAVE' %>
+		</button>
+		<button style="color:#fff;" class="btn btn-inverse" type="button" ng-click="Modal.close()">CLOSE</button>
+	</div>
+</div>

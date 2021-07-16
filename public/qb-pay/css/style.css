@@ -1,0 +1,200 @@
+.form-group .field-label {
+    float: left;
+    min-width: 140px;
+    margin-top: 6px;
+    font-size: 13px;
+    color: #555;
+    font-weight: normal;
+}
+.form-group .field-label.cvv {
+	min-width: 40px;
+}
+.form-group .field-input {
+	display: block;
+	margin-left: 140px;
+}
+.form-group .field-input .input-group {
+	display: block;
+}
+.form-group .field-input.cvv-input {
+	margin-left: 40px;
+}
+@media (min-width: 576px) {
+	.form-group .field-input .col-sm-4 {
+		-webkit-box-flex: 0;
+	    -ms-flex: 0 0 33.333333%;
+	    	flex: 0 0 33.333333%;
+	    max-width: 33.333333%;
+	}
+}
+.form-group .field-input .validation-invalid,
+.form-group .field-input .server-erros {
+	color: #C81B1B;
+	font-size: 11px;
+} 
+.form-group .field-input .col-sm-4 {
+	width: 100%;
+}
+.form-group .field-input .col-sm-4.divide {
+	width: 50%;
+}
+.card {
+	/*border: 0;*/
+}
+.confirm-btn {
+	min-width: 80px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-right: 5px;
+}
+.btn.btn-inverse {
+    background: #6c6c6c;
+    color: #fff;
+}
+.btn.btn-inverse:hover {
+	background: #5f5f5f;
+}
+.qb-form {
+	margin: 0;
+}
+.qb-form .form-control {
+    border-color: #dfdfdf;
+    font-weight: 400;
+    font-size: 13px;
+    outline: 0;
+    border-radius: 3px;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 30px !important;
+    line-height: 30px;
+    box-shadow: none;
+}
+.qb-form .form-control:focus {
+	box-shadow: none;
+	border: 1px solid #b8d3eb;
+}
+.qb-form .input-group-text {
+	background-color: #f2f2f2;
+	border-color: #dfdfdf;
+	font-size: 12px;
+}
+.form-group.required-input label:after {
+	content: "*";
+	color: #C81B1B;
+}
+.card-body {
+	padding: 40px 50px;
+}
+.qb-logo {
+	margin-bottom: 25px;
+}
+.card-field input {
+	background: url("../img/credit-cards.png") no-repeat scroll rgba(0, 0, 0, 0);
+	vertical-align: middle;
+    background-size: 40px;
+    background-position: right 30px;
+    width: 100%;
+}
+.card-field input.visa {
+		background-position: right 0px;
+}
+.card-field input.mastercard {
+	background-position: right -24px;
+}
+.card-field input.amex {
+	background-position: right -49px;
+}
+.card-field input.discover {
+	background-position: right -74px;
+}
+.card-field input.diners {
+	background-position: right -98px;
+}
+.card-field input.diners-carte-blanche {
+	background-position: right -122px;
+}
+.card-field input.jcb {
+	background-position: right -148px;
+}
+.card-field input.visa-electron {
+	background-position: right -172px;
+}
+.col-width-set {
+	width: 100%;
+	max-width: 700px;
+}
+.charge-amt {
+	font-size: 18px;
+	margin-top: 10px;
+	/*font-weight: bold;*/
+	color: #333;
+}
+.charge-amt label {
+	margin: 0;
+	font-weight: normal;
+}
+@media(max-width: 670px) {
+	.form-group .field-label {
+		display: block;
+		float: none;
+	}
+	.form-group .field-input {
+		margin: 0;
+	}
+	.card-body {
+		padding: 20px;
+	}
+	body.qb-body {
+		padding: 10px !important;
+	}
+	.form-group .field-label.cvv {
+		float: left;
+	}
+	.form-group .field-input.cvv-input {
+		/*margin: 0;*/
+	}
+	.expiration select {
+		margin-bottom: 10px;
+	}
+	.charge-amt {
+		font-size: 16px;
+	}
+	body .media-row-margin {
+		margin: 0;
+	}
+}
+@media(max-width: 575px) {
+	.form-group .field-label.cvv {
+		float: none;
+	}
+	.form-group .field-input.cvv-input {
+		margin: 0;
+	}
+}
+@media(max-width: 400px) {
+	.charge-amt {
+		display: block;
+	    float: none !important;
+	    text-align: right;
+	}
+	.qb-logo {
+		margin-bottom: 5px;
+	}
+}
+.p-5 {
+	padding: 3rem!important;
+}
+@media (min-width: 768px) {
+	.justify-content-md-center {
+	    -webkit-box-pack: center!important;
+	    -ms-flex-pack: center!important;
+	    justify-content: center!important;
+	}
+}
+.row-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}

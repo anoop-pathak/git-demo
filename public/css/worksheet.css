@@ -1,0 +1,338 @@
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	font-weight: normal;
+}
+p {
+	margin: 0;
+	font-weight: normal;
+}
+.page {
+	overflow: hidden;
+	page-break-before: always;
+}
+.page-break {
+	page-break-inside: avoid;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.text-left {
+	text-align: left;
+}
+.pull-right {
+	float: right;
+}
+.clearfix {
+	clear: both;
+}
+.bg-white {
+	background: #fff;
+}
+.jp-print-container {
+	width: 794px;
+	margin: 0 auto;
+	color: #333;
+	background: #fff;
+	font-family: Helvetica,Arial,sans-serif;
+	font-weight: normal;
+}
+.jp-print-container .page-spacing-config {
+	display: block; 
+	padding: .9cm .8cm;
+	-webkit-box-sizing: border-box; 
+	   -moz-box-sizing: border-box; 
+			box-sizing: border-box; 
+}
+.last-modify {
+	font-size: 11px;
+	color: #707070;
+	text-align: right;
+}
+.print-title {
+	line-height: 24px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+}
+.header-row {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.col-6 {
+	float: left;
+	width: 50%;
+}
+.company-logo {
+	float: left;
+	height: 100px;
+	width: 100px;
+	border: 1px solid #eee;
+	line-height: 100px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.company-logo img {
+	max-width: 100%;
+	max-height: 100%;
+	vertical-align: middle;
+}
+.company-info {
+	padding-left: 120px;
+}
+.company-info h5 {
+	font-size: 17px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.company-info p {
+	margin-bottom: 3px;
+	font-size: 15px;
+}
+.company-info.right-info {
+	padding: 0;
+}
+.company-info p.address label {
+	color: #333;
+	font-weight: bold;
+}
+.sales-address h5 {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.sales-address p {
+	margin-bottom: 3px;
+	font-size: 15px;
+}
+.table {
+    font-size: 13px;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    /*table-layout: fixed;*/
+}
+.table tr.page-break {
+	/*border-bottom: 1px solid #ccc;*/
+}
+.table tr {
+	page-break-inside: avoid;
+}
+.table th {
+	text-align: left;
+	font-weight: bold;
+	border-top: 2px solid #707070;
+	border-bottom: 1px solid #707070;
+	vertical-align: middle;
+}
+.table td {
+	line-height: 1.4;
+	vertical-align: top;
+}
+.table td * {
+	font-weight: normal;
+}
+.table th,
+.table td {
+	padding: 10px 5px;
+}
+.table th .sub-text,
+.table td .sub-text {
+	font-size: 12px;
+}
+.table td .sub-text {
+	font-weight: normal;
+}
+.table th.text-right,
+.table td.text-right {
+	text-align: right;
+}
+.item-extra-fields {
+	margin-top: 8px;
+    display: block;
+}
+.item-extra-fields .item-block {
+    display: inline;
+    margin-right: 10px;
+}
+.jp-item-des td {
+	border-bottom: 1px solid #CDCED1;
+}
+.item-description .label-color {
+	color: #C81B1B;
+}
+.item-description p {
+	white-space: pre-wrap;
+}
+.chips-container {
+	margin-bottom: 10px;
+}
+.chips-container .print-chips {
+	display: inline-block;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	background: #E9EBEF;
+	padding: 4px 8px;
+	font-size: 12px;
+	border-radius: 3px;
+	white-space: nowrap;
+}
+.total-amt {
+	margin-bottom: 20px;
+	font-size: 18px;
+	color: #418BCA;
+}
+.worksheet-tier.tier-one td {
+	background: #65a7e1;
+	color: #fff;
+}
+.worksheet-tier.tier-two td {
+	background: #cbdef3;
+}
+.worksheet-tier.tier-three td {
+	background: #e4edf6;
+}
+.tier-des td {
+	background: #F2F7FC;
+}
+.worksheet-tier.tier-two td:first-child,
+.tier-des.tier-two td:first-child,
+.tier-item.tier-two td:first-child,
+.jp-item-des.tier-two td:first-child {
+	border-left: 10px solid #fff;
+}
+.worksheet-tier.tier-three td:first-child,
+.tier-des.tier-three td:first-child,
+.tier-item.tier-three td:first-child,
+.jp-item-des.tier-three td:first-child {
+	border-left: 20px solid #fff;
+}
+.branch-detail {
+	margin: 10px 0;
+	padding: 5px;
+	font-size: 12px;
+	background: #E9EBEF;
+	border-radius: 5px;
+}
+.table-total td {
+	font-size: 14px;
+	border-bottom: 1px solid #CDCED1;
+}
+.print-table-footer {
+	margin-top: 15px;
+	text-align: right;
+	font-size: 14px;
+}
+.print-table-footer .footer-value {
+	margin-bottom: 10px;
+	font-weight: normal;
+}
+.print-table-footer .footer-value span,
+.print-table-footer .footer-value label {
+	display: inline-block;
+	min-width: 160px;
+	font-weight: normal;
+	color: #333;
+}
+.print-table-footer .footer-value.total span,
+.print-table-footer .footer-value.total label {
+	font-size: 16px;
+	font-weight: bold;
+}
+.worksheet-note {
+	display: block;
+	width: 100%;
+	margin-top: 20px;
+}
+.worksheet-note label {
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+	color: #333;
+}
+.worksheet-note p {
+	margin-top: 5px;
+	font-size: 13px;
+	font-weight: normal;
+	white-space: pre-wrap;
+}
+.sign {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	text-align: center;
+	border: 1px solid #ccc;
+	margin-top: 1px;
+}
+.sign img {
+	max-height: 75%;
+	width: auto;
+	margin-top: 1px;
+}
+.sign .sign-date {
+	font-size: 10px;
+	height: 30px;
+	line-height: 18px;
+	border-top: 1px solid #ccc;
+	margin-top: 3px;
+}
+.signbox {
+	margin-top: 15px;
+}
+.signbox label {
+	display: block;
+	color: #333;
+	margin-bottom: 5px;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+/**Copy Code from Old File just for confirmation*/
+.attachment-container {
+	font-size: 0;
+}
+.attachment-container h2 {
+	text-align: center;
+	font-size: 20px;
+	background: #000;
+	color: #fff;
+	padding: 5px;
+	margin-top: 30px;
+}
+.attachment-container .attach-images {
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 1%;
+}
+.attachment-container .attach-images:last-child {
+	margin-right: 0;
+}
+.attachment-container p {
+	text-align: center;
+	font-size: 16px;
+	color: #000;
+	word-break: break-all;
+	margin-top: 50px;
+	min-height: 40px;
+}
+.customer-detail-info-print {
+	float: right;
+}
+.customer-detail-info-print {
+	float: right;
+	font-size: 16px;
+}
+.company-detail-info-print {
+	display: inline-block;
+	font-size: 16px;
+}
+.company-detail-info-print label, 
+.customer-detail-info-print label {
+	line-height: 20px;
+	display: block;
+} 

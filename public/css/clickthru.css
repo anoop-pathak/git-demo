@@ -1,0 +1,198 @@
+ 
+body {
+    background: #fff;
+    margin: 0;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    color: #333;
+}
+body * {
+    box-sizing: border-box;
+}
+.font0 {
+    font-size: 0;
+}
+.clickthru-print-container {
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+.company-details .left,
+.company-details .right {
+    font-size: 15px;
+    display: inline-block;
+    width: 50%;
+    color: #333;
+    vertical-align: top;
+}
+.company-details .right h4 {
+    margin-top: 0;
+}
+.text-right {
+    text-align: right;
+}
+.mb5 {
+    margin-bottom: 5px;
+}
+.company-details h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: normal;
+}
+.company-details .address  {
+    width: 235px;
+}
+.company-details .right .address {
+    margin-left: auto;
+}
+.measurement-data-container {
+    padding: 15px 15px 10px;
+    border: 1px solid #eee;
+    margin-top: 15px;
+}
+.measurement-data-container h5 {
+    margin: 3px 0 8px;
+    font-size: 17px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.job-details {
+    display: inline-block;
+    width: 230px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.data-container {
+    margin-top: 20px;
+}
+.data-block {
+    width: 100%;
+    display: inline-block;
+    font-size: 15px;
+    padding: 5px 0;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+.data-block:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.data-block .item-name {
+    display: inline-block;
+    width: 49%;
+}
+.data-block .unit {
+    display: inline-block;
+    float: right;
+    width: 49%;
+    text-align: right;
+}
+
+.data-block .unit-name {
+    text-transform: capitalize;
+}
+.data-block .notes-text {
+    display: block;
+    float: none;
+    margin-top: 5px;
+    width: 100%;
+    text-align: left;
+}
+.data-block .inner-value-block {
+    font-size: 14px;
+    padding-left: 15px;
+    margin-top: 12px;
+}
+.measure-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.measure-title h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.company-logo {
+    border: 1px solid rgb(204, 204, 204);
+    text-align: center;
+    height: 130px;
+    line-height: 128px;
+    width: 128px;
+    float: left;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.company-logo img {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.address-col {
+    display: block;
+    margin-left: 140px;
+}
+.address-col h4 {
+    margin-top: 0;
+}
+.logo-hide-text {
+    margin-left: 0;
+}
+.roof-size {
+    font-weight: bold;
+    font-size: 16px;
+}
+.roof-size .unit {
+    color: #f1b461;
+}
+.amount-estimated,
+.amount-adjustable {
+    font-size: 17px;
+    margin-top: 15px;
+}
+.amount-block {
+    text-align: right;
+}
+.amount-total {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    clear: both;
+}
+.amount-total .amount {
+    color: #418BCA;
+}
+.adjustable-note {
+    width: 100%;
+    margin-top: 15px;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    padding: 10px 15px 15px;
+    box-sizing: border-box;
+}
+.adjustable-note .item-name {
+    text-transform: initial;
+    color: #111;
+}
+.created-date {
+    padding-right: 15px;
+    text-align: right;
+    font-size: 13px;
+    color: #889;
+}
+.amount-block {
+    text-align: right;
+}
+.amount-label {
+    display: inline-block;
+    min-width: 200px;
+    text-align: right;
+}
+.amount {
+    display: inline-block;
+    min-width: 130px;
+    text-align: right;
+}

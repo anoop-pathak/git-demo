@@ -1,0 +1,477 @@
+// variables
+@light-grey: #666;
+
+.public-customer {
+	background: #f2f2f2;
+	margin: 0;
+	padding: 0;
+	color: #666;
+	h4 {
+		text-transform: uppercase;
+		text-align: center;
+	}
+	.container {
+		background: #fefefe;
+		min-height: 150px;
+		padding: 25px;
+		// width: 1500px;
+		box-shadow: 0 0 3px #ccc;
+	}
+	header {
+		border-top: 5px solid #357ebd;
+		.logo-col {
+			text-align: left;
+		}
+		.logo {
+			max-height: 200px;
+			width: 215px;
+			display: inline;
+		}
+		.contact-info {
+			padding: 24px 0;
+			float: right;
+			h3 {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+			p {
+				margin-bottom: 5px;
+			}
+		}
+		@media(max-width: 991px) {
+			.logo-col {
+				text-align: center;
+			}
+			.contact-info { 
+				float: none;
+			}
+		}
+		.job-id-section {
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 20px;
+		}
+		.working-details {
+			text-align: center;
+			h1 {
+				margin-top: 45px;
+				margin-bottom: 5px;
+				color: @light-grey !important;
+			}
+		}
+		.third-party-icons {
+			margin-bottom: 5px;
+			a {
+				color: @light-grey;
+				&:hover {
+					opacity: 0.7;
+				}
+				img {
+					margin-left: 5px;
+					width: 20px;
+				}
+			}
+		}
+	}
+	.main-container {
+		margin: 15px auto;
+	}
+	.customer-detail-section {
+		// padding: 20px;
+		// border-right: 1px solid #ccc;
+		.cust-inner-detail {
+			border-bottom: 1px solid #ccc;
+			padding: 10px 0;
+			label {
+				font-weight: normal;
+			}
+			span {
+				float: right;
+			}
+			p {
+				clear: both;
+			}
+			.sub-inner-detail {
+				p {
+					margin: 7px 0;
+					label {
+						margin-bottom: 0;
+					}
+				}
+			}
+			.inner-detail-border {
+				border-top: 1px solid #ccc;
+				border-bottom: 1px solid #ccc;
+			}
+		}
+	}
+	.customer-resource-section {
+		padding: 0 20px;
+		.main-resource-img {
+			margin-bottom: 10px;
+			text-align: center;
+		}
+	}
+	.section-border-left {
+		border-left: 1px solid #ccc;
+	}
+	.section-border-right {
+		border-right: 1px solid #ccc;	
+	}
+	@media(max-width: 991px) {
+		.section-border-left, 
+		.section-border-right {
+			border: none;
+		}	
+	}
+	.resource-inner-section {
+		.resource-col {
+			float: left;
+    		margin: 1%;
+    		width: 23.5%;
+    		&:first-child {
+    			margin-left: 0;
+    		}
+    		&:last-child {
+    			margin-right: 0;
+    		}
+		}
+	}
+	.share-btn {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.remaining-balance {
+		padding: 10px;
+		p {
+			font-size: 18px;
+		}
+		h3 {
+			margin-top: 5px;
+		}
+	}
+	.proposals-contractors {
+		margin-top: 35px;
+		margin-bottom: 20px;
+		.resource-viewer {
+			border: 1px solid #eee;
+			display: inline-block;
+			margin-right: 1%;
+			margin-bottom: 3%;
+			text-align: center;
+			vertical-align: top;
+			width: 123px;
+			&:hover {
+				border-color: #357ebd;
+			}
+			.resource-inner {
+				display: inline-block;
+				vertical-align: bottom;
+				text-align: center;
+				width: 100%;
+				position: relative;
+				-webkit-transition: all .05s ease-in-out 0s;
+				     -o-transition: all .05s ease-in-out 0s;
+				        transition: all .05s ease-in-out 0s;
+			}
+			.img-thumb {
+				height: 100px;
+				overflow: hidden;
+				line-height: 100px;
+				width: 65px;
+				text-align: center;
+				margin: 0 auto;
+				img {
+					height: auto;
+					width: 100%;
+					max-height: 100%;
+				}
+			}
+		}
+		.resource-document {
+			&.resource-viewer .img-thumb img {
+				height: 56px;
+				width: auto;
+			}
+		}
+		.file-name {
+			overflow: hidden;
+			padding-top: 7px;
+			position: relative;
+			text-overflow: ellipsis;
+			vertical-align: bottom;
+			white-space: nowrap;
+			width: 100%;
+			color: #666;
+			background: none repeat scroll 0 0 #fafafa;
+			margin-bottom: 0;
+			padding: 5px;
+			float: left;
+			border-top: 1px solid #f5f5f5;
+			text-decoration: none;
+		}
+	}
+	.customer-activity-section {
+		// border-left: 1px solid #ccc;
+		// padding: 20px;
+	}
+	.customer-activity-feed {
+		ul {
+			padding: 0;
+			margin: 0;
+			li {
+				list-style-type: none;
+				padding: 6px 12px;
+				border-bottom: 1px solid #ccc;
+			}
+		}
+	}
+	.main-section-col {
+		display: table-cell;
+		vertical-align: top;
+		float: none;
+	}
+	@media(max-width:991px) {
+		.main-section-col {
+			display: block;
+			width: 100%;
+			float: left;
+		}	
+	}
+	.weather-module {
+		img {
+			border: 1px solid #ccc;
+		}
+	}
+	.poweredby-script {
+		text-align: right;
+		// margin-top: 20px;
+	}
+	.color-grey {
+		color: #666;
+	}
+	.poweredby-text {
+		width: 230px;
+		text-align: right;
+	}
+	.survey-btn-container {
+		border-top: 1px solid #ccc;
+		padding-top: 10px;
+	}
+	footer {
+		margin-left: 0;
+		padding: 0;
+		.container {
+			padding: 0;
+			min-height: auto;
+		}
+	}
+	.datepicker {
+		padding: 0;
+	}
+	.datepicker-inline {
+		width: 100%;
+		table {
+			width: 100%;
+			border: 1px solid #ddd;
+			> thead > tr > th, > thead > tr > td {
+				border: 1px solid #ddd;
+				border-bottom-width: 2px;
+			}
+			> tbody > tr > th, > tfoot > tr > th, > tbody > tr > td, > tfoot > tr > td {
+				border: 1px solid #ddd;
+			}
+			tr td.today, tr td.today.disabled, tr td.today.disabled:hover, tr td.today:hover, tr td.active, tr td.active.disabled, tr td.active.disabled:hover, tr td.active:hover {
+				background-color: #357ebd;
+				background-image: none;
+				color: #fff;
+				border-radius: 0;
+				border: none;
+			}
+		}
+	}
+	.social-icons {
+	    padding-left: 25px;
+	    padding-top: 35px;
+		a {
+			margin-right: 5px;
+			-webkit-transition: all .05s ease-in-out 0s;
+			     -o-transition: all .05s ease-in-out 0s;
+			        transition: all .05s ease-in-out 0s;
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+}	
+.project-tabs {
+	.nav-tabs {
+		li {
+			float: left;
+		}
+	}
+	.tab-content {
+		padding-top: 15px;
+	}
+}
+.job-price-info {
+	.cust-inner-detail {
+		border: 0 !important;
+	}
+}
+.custom-checkbox {
+    label.css-label {
+        &:before {
+            background-image: url(../images/checkbox.png);
+        }
+    }
+    input[type=checkbox].css-checkbox+label.checkbox-label {
+    	margin: 0;
+	    padding-left: 25px;
+	    font-size: 14px;
+	    color: #666;
+    }
+    input[type=checkbox].css-checkbox:checked+label.css-label {
+    	&:before {
+	    	background-image: url(../images/checkbox.png);
+		    background-position: 0px 100%;
+    	}
+	}
+	input[disabled].css-checkbox+label.checkbox-label {
+		&:before {
+			background: #ddd;
+			border-radius: 3px;
+		    cursor: not-allowed;
+		}
+	}
+}
+.border0 {
+	border: 0 !important;
+}
+
+/* company videos slider */
+.comp-videos-slider {
+	iframe {
+		width: 100%;
+		height: 150px;
+	}
+}
+.company-videos-section {
+	.bx-wrapper {
+		.bx-viewport {
+			left: 0;
+			border: 0;
+			box-shadow: unset;
+		}
+		.bx-controls-direction {
+			a {
+				width: 10px;
+				background: unset;
+				background-repeat: no-repeat;
+				background-size: 100%;
+				&.disabled {
+					display: block;
+					opacity: 0.4;
+				}
+				&.bx-next {
+					right: -20px;
+					background-image: url(../images/arrow-next.png);
+				}
+				&.bx-prev {
+					left: -20px;
+					background-image: url(../images/arrow-prev.png);
+				}
+			}
+		}
+	}
+}
+.videos-slider-outer {
+	padding: 0 10px;
+}
+.public-customer .parent-proposal-container {
+	margin-top: 0;
+	margin-bottom: 0;
+	h4 {
+		font-size: 15px;
+		text-align: left;
+	}
+	.proposal-tab-container {
+		.nav {
+		    position: relative;
+			text-align: left;
+    		z-index: 1;
+		}
+	}
+	.tab-content {
+		position: relative;
+		border: 1px solid #ddd;
+		margin-top: -2px;
+		min-height: 165px;
+		background: #fff;
+		padding: 0 10px;
+		.proposals-slider {
+			height: 155px;
+		}
+	}
+	.bx-wrapper {
+		position: unset;
+	}
+}
+.parent-job-container {
+	background-color: #f9f9f9;
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 10px 0 15px;
+	border-radius: 3px;
+}
+.multi-proj-label {
+    display: inline-block;
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    vertical-align: middle;
+    box-shadow: unset;
+    &:hover {
+    	color: #fff;
+    }
+    &:focus {
+    	box-shadow: unset;
+	}
+}
+.finance-greensky {
+	> button {
+		background: #d6e8d5;
+		color: #0f8907;
+		border: 0;
+		font-weight: normal;
+		margin: 0 !important;
+		img {
+			width: 14px;
+    		margin-right: 3px;
+    		margin-top: -1px;
+		}
+		&.dropdown-toggle {
+			border-left: 1px solid #8fc88f;
+		}
+		&:hover,
+		&:focus,
+		&:active,
+		.active {
+			background: darken(#d6e8d5, 5%);
+			color: #0f8907;
+			box-shadow: none;
+			&.dropdown-toggle {
+				border-left: 1px solid #8fc88f;
+			}
+		}
+	}
+	&.open {
+		> .dropdown-toggle {
+			background: darken(#d6e8d5, 5%);
+			color: #0f8907;
+			box-shadow: none;
+		}
+	}
+}

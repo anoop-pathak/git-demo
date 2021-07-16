@@ -1,0 +1,49 @@
+<div class="custom-recurring-modal">
+	<div class="popup-title">
+		<h3 style="padding:0;" class="modal-title">
+			<% Modal.ini.name %> selected
+		</h3>
+	</div>
+
+	<div class="popup-inner-detail">
+		<p class="font-normal" ng-show="!Modal.haveFilledVals">
+			You have selected 
+			<span 
+				style="border-bottom: 3px solid <% Modal.ini.color %>;
+						font-size: 15px;"><% Modal.ini.name %></span>
+			for initialling and signing. Please Confirm to proceed.
+		</p>
+		<p class="font-normal" ng-show="Modal.haveFilledVals">
+			You have some unsaved Initials & Signatures which would get discarded before moving forward.
+		</p>
+	</div>
+
+	<div class="popup-footer" ng-show="Modal.haveFilledVals">
+		<button
+			style="color: #fff"
+			class="btn btn-primary" 
+			type="button"
+			ng-click="Modal.close(false)">
+			STAY
+		</button>
+		<button
+			style="color: #fff"
+			class="btn btn-inverse" 
+			type="button" 
+			ng-click="Modal.close(true)">DISCARD</button>
+	</div>
+	<div class="popup-footer" ng-show="!Modal.haveFilledVals">
+		<button
+			style="color: #fff"
+			class="btn btn-primary" 
+			type="button"
+			ng-click="Modal.close(true)">
+			CONFIRM
+		</button>
+		<button
+			style="color: #fff"
+			class="btn btn-inverse" 
+			type="button" 
+			ng-click="Modal.close(false	)">CANCEL</button>
+	</div>
+</div>

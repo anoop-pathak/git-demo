@@ -1,0 +1,51 @@
+<div class="options-sign">
+	<div class="style-options-comp text-options-comp">
+		<label>Sign Here</label>
+		<input 
+			type="text" 
+			ng-model="userEntertext" 
+			class="input form-control" 
+			ng-change="updateImage('text')"
+			maxlength="{{textInputObj.maxLength}}">
+	</div>
+	<hr>
+	<!-- <div class="style-options-comp"> 
+		<label>Font Size</label>
+		<input 
+			type="text" 
+			ng-model="userEnterSize" 
+			class="input form-control" 
+			ng-change="updateImage('size')"  class="font-size">
+	</div>
+	<div class="style-options-comp">
+		<label>Font family </label>
+		<select
+			ng-model="userEnterFamily"
+			name="familyList" 
+			ng-change="updateImage('font-family')" 
+			id="familyList"
+			class="form-control">
+			<option ng-repeat="family in familyList"><% family %></option>
+		</select>
+	</div>
+	<div class="style-options-comp">
+		<label>Font Style</label>
+		<select
+			ng-model="userEnterStyle"
+			name="styleList" 
+			ng-change="updateImage('style')" 
+			id="styleList"
+			class="form-control">
+			<option ng-repeat="style in styleList"><% style %></option>
+		</select>
+	</div> -->
+
+	<% data.isValidImage() %>
+	
+	<p class="server-errors" style="color:red" ng-if="userEnterSize < 40"> Font size must be greater than or equal to 40. </p>
+	
+	<!-- cnvas -->
+	<div class="canvas-section">
+		
+	</div>
+</div>

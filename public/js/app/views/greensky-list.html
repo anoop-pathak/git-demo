@@ -1,0 +1,43 @@
+<div class="modal-header">
+	<h4 style="padding:0; text-align: left;" class="modal-title">GreenSky</h4>
+</div>
+<div class="modal-body">
+	<div class="table-responsive border0">
+	  	<table class="table table-striped border0">
+	  		<thead>
+	  			<tr>
+					<th width="15%">Sr. #</th>	
+					<th width="50%">Application Id</th>
+					<!-- <th width="10%" class="col-date">Status</th> -->
+					<th width="35%">Created At</th>
+				</tr>
+	  		</thead>
+	  		<tbody>
+	  			<tr ng-repeat="data in Modal.list" ng-if="!Modal.loading">
+					<td><%$index+1%></td>
+					<td>
+						<a 
+							ng-href="https://portal.greenskycredit.com/loanagreement?loanid=<%data.application_id%>" 
+							title="Click to view current status"
+							target="_blank"><%data.application_id%></a>
+					</td>
+					<!-- <td>
+						{{data.status|Capitalize}}
+					</td> -->
+					<td>
+						<%data.dateTime%>
+					</td>
+				</tr>
+				<tr ng-if="Modal.loading" class="text-center">
+					<td class="text-center" colspan="3"><i class="fa fa-spinner fa-spin"></i>Loading...</td>
+				</tr>
+				<tr ng-if="Modal.list.length == 0 && !Modal.loading" class="text-center">
+					<td class="text-center" colspan="3">No record found.</td>
+				</tr>
+	  		</tbody>
+  		</table>
+	</div>
+</div>
+<div class="modal-footer">
+	<button type="button" style="color: #fff;" class="btn btn-inverse" ng-click="Modal.close()">Close</button>
+</div>
